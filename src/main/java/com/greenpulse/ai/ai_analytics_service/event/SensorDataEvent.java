@@ -1,12 +1,16 @@
-package com.greenpulse.ai.ai_analytics_service.dto;
+package com.greenpulse.ai.ai_analytics_service.event;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SensorData {
+public class SensorDataEvent {
+    private String city;
     private double temp;
     private double pres;
     private double dewp;
