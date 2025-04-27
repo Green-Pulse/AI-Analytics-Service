@@ -8,6 +8,7 @@ RUN gradle bootJar --no-daemon
 FROM openjdk:21-jdk-slim
 WORKDIR /app
 COPY --from=builder /home/app/build/libs/*.jar app.jar
+COPY model /app/model
 
 # порт, на котором работает сервис
 EXPOSE 8086
