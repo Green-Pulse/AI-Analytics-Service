@@ -5,7 +5,7 @@ WORKDIR /home/app
 RUN gradle bootJar --no-daemon
 
 # ---- Run the application with lightweight JDK 21 image ----
-FROM eclipse-temurin:21-jdk-alpine
+FROM openjdk:21-jdk-slim
 WORKDIR /app
 COPY --from=builder /home/app/build/libs/*.jar app.jar
 
